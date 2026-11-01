@@ -1,0 +1,161 @@
+column,description,type,units_or_coding,used_in_analysis
+study,"Trial name, as in HemOncKB (the export's ""PSMAfore"" is written ""PSMA Fore"")",text,,Yes
+Link 1,URL of the first source publication used for abstraction,text,public URL,No
+Link 2,"URL of a second source publication used for abstraction, when one was needed",text,public URL,No
+Location of post-protocol treatment information,Where in the sources the post-protocol (subsequent) treatment counts were found,text,,No
+Specific Treatment,Experimental agent carrying the qualifying later-line FDA approval; drug class is assigned from it,text,,Yes
+perc_pts_WesternEurope,Proportion of enrolled participants from Western Europe,proportion,fraction 0-1; NR = not reported,Yes
+perc_pts_US,Proportion of enrolled participants from the United States,proportion,fraction 0-1; NR = not reported,Yes
+perc_pts_Europe,Proportion of enrolled participants from Europe (Western Europe if Europe was not reported),proportion,fraction 0-1; NR = not reported,Yes
+perc_pts_NorthAmerica,"Proportion of enrolled participants from North America (US, with or without Canada, if North America was not reported)",proportion,fraction 0-1; NR = not reported,Yes
+perc_pts_OtherMetric,TODO,number,,No
+Other Metric,TODO,text,,No
+perc_pts_NorthAmerica_Europe,Western enrollment: proportion of enrolled participants from North America plus Europe,proportion,fraction 0-1; NR = not reported or not computable,Yes
+Western Europe uncategorized,TODO,number,,No
+US uncategorized,TODO,number,,No
+ITT_Control_Num,Number of control-arm participants in the intention-to-treat population,integer,participants,Yes
+Total_Control_Pts_Receiving_Subsequent_Therapy,Denominator: control patients who received any subsequent systemic therapy,integer,patients; NR = not reported,No
+Total_Control_Pts_With_EFS_or_PFS_Event,"Denominator: control patients with a PFS, DFS or EFS event",integer,patients; NR = not reported,No
+Total_Control_Pts_Progressed,Denominator: control patients who progressed,integer,patients; NR = not reported,Yes
+Num control pts getting post-protocol drug in class,"Numerator, in-class definition: control patients who subsequently received any drug in the experimental drug's class",integer,patients; NR = not reported,Yes
+Num control pts getting exact drug post-protocol,"Numerator, exact-drug definition: control patients who subsequently received the exact experimental drug",integer,patients; NR = not reported,Yes
+Frac_ctrl_pts_getting_post-protocol_drug_in_class_progressed_subsequent_therapy,"Crossover fraction: control patients who subsequently received any drug in the experimental drug's class, divided by control patients who received any subsequent systemic therapy (primary definition)",proportion,fraction 0-1 (can exceed 1 when the numerator exceeds the denominator); NR = not reported,Yes
+Frac_ctrl_pts_getting_exact_drug_post-protocol_progressed_subsequent_therapy,"Crossover fraction: control patients who subsequently received the exact experimental drug, divided by control patients who received any subsequent systemic therapy (primary definition)",proportion,fraction 0-1 (can exceed 1 when the numerator exceeds the denominator); NR = not reported,Yes
+Frac_ctrl_pts_getting_post-protocol_drug_in_class_event,"Crossover fraction: control patients who subsequently received any drug in the experimental drug's class, divided by control patients with a PFS, DFS or EFS event",proportion,fraction 0-1 (can exceed 1 when the numerator exceeds the denominator); NR = not reported,Yes
+Frac_ctrl_pts_getting_exact_drug_post-protocol_event,"Crossover fraction: control patients who subsequently received the exact experimental drug, divided by control patients with a PFS, DFS or EFS event",proportion,fraction 0-1 (can exceed 1 when the numerator exceeds the denominator); NR = not reported,Yes
+Frac_ctrl_pts_getting_post-protocol_drug_in_class_progressed,"Crossover fraction: control patients who subsequently received any drug in the experimental drug's class, divided by control patients who progressed",proportion,fraction 0-1 (can exceed 1 when the numerator exceeds the denominator); NR = not reported,Yes
+Frac_ctrl_pts_getting_exact_drug_post-protocol_progressed,"Crossover fraction: control patients who subsequently received the exact experimental drug, divided by control patients who progressed",proportion,fraction 0-1 (can exceed 1 when the numerator exceeds the denominator); NR = not reported,Yes
+Combined_OS_Median_intervention,TODO,number,,No
+Combined_OS_Median_ctrl,TODO,number,,No
+Combined_OS_endpoint_used,TODO,text,,No
+Combined_PFS_Median_intervention,TODO,number,,No
+Combined_PFS_Median_ctrl,TODO,number,,No
+Combined_PFS_endpoint_used,TODO,text,,No
+Combined_OS_HR,"Overall survival hazard ratio, experimental vs control",number,hazard ratio,Yes
+Combined_OS_HR_CI_low,Lower limit of the 95% confidence interval of the overall survival hazard ratio,number,hazard ratio; NR = not reported,Yes
+Combined_OS_HR_CI_high,Upper limit of the 95% confidence interval of the overall survival hazard ratio,number,hazard ratio; NR = not reported,Yes
+OS_Significant,TODO,text,,No
+Combined_PFS_HR,"Hazard ratio for the progression-type endpoint (PFS, DFS or EFS), experimental vs control",number,hazard ratio; NR = not reported,Yes
+Combined_PFS_HR_CI_low,Lower limit of the 95% confidence interval of the progression-type hazard ratio,number,hazard ratio; NR = not reported,No
+Combined_PFS_HR_CI_high,Upper limit of the 95% confidence interval of the progression-type hazard ratio,number,hazard ratio; NR = not reported,No
+PFS_Significant,TODO,text,,No
+regimen,Experimental regimen (HemOncKB),text,,Yes
+comparator,Comparator regimen (HemOncKB),text,,Yes
+efficacy,Efficacy summary string taken directly from HemOnc.org (HemOncKB),text,HTML line breaks as <br/>,No
+trial_id,Clinical trial registry identifier (HemOncKB),text,NCT number,No
+enrollment,Years of enrollment as reported (HemOncKB),text,YYYY-MM to YYYY-MM,Yes
+phase,Phase of the trial (HemOncKB),text,,No
+study_design,"Study design, derived from arm-level information (HemOncKB)",text,,No
+sponsor,Study sponsor(s) (HemOncKB),text,,No
+context,Treatment context in which the study-regimen pair takes place (HemOncKB),text,for example Adjuvant therapy,Yes
+r_modifier,"Additional specification of the experimental regimen, such as cycles or dose (HemOncKB)",text,none = no modifier,No
+condition_x,"Condition studied, from the results table of the HemOncKB export (suffix _x: study_results)",text,,Yes
+condition_cui_x,"Concept identifier of the condition, results table (HemOncKB)",number,OMOP concept id,No
+biomarker_x,"Biomarker-defined subtype of the condition, results table (HemOncKB)",text,,No
+c_modifier,"Additional specification of the comparator, such as cycles or dose (HemOncKB)",text,none = no modifier,No
+comparator_code,Code recording why a comparator is incompletely instantiated as a regimen (HemOncKB),text,none = complete,No
+error,Whether HemOncKB flagged a parsing error for the row (HemOncKB),boolean,0/1,No
+date_added_x,Date the results row was added to HemOncKB (suffix _x: study_results),date,YYYY-MM-DD,No
+registry,Clinical trial registry (HemOncKB),text,,No
+condition_y,"Condition studied, from the study table of the HemOncKB export (suffix _y: study.table)",text,,No
+condition_cui_y,"Concept identifier of the condition, study table (HemOncKB)",number,OMOP concept id,No
+biomarker_y,"Biomarker-defined subtype of the condition, study table (HemOncKB)",text,,No
+study_design_imputed,Whether the study design was imputed from partial information (HemOncKB),boolean,0/1,No
+sact,Whether any arm uses systemic anticancer therapy (HemOncKB),boolean,0/1,No
+protocol,Whether the study involves multi-phasic protocols in any arm (HemOncKB),boolean,0/1,No
+reg_study,Whether the study was cited by a regulatory authority in a labeling decision (HemOncKB),boolean,0/1,No
+unreg_study,Whether the study was cited by a regulatory authority in a withdrawal decision (HemOncKB),boolean,0/1,No
+start,Start of enrollment (HemOncKB; a year alone is read as 1 January),date,YYYY-MM-DD,Yes
+end,End of enrollment (HemOncKB; a year alone is read as 1 January),date,YYYY-MM-DD,No
+study_group,Study group(s) named in the publication (HemOncKB),text,,No
+sponsor_type,Type of sponsor (HemOncKB),text,,Yes
+pubs_in_hemonc,"Number of publications on this study, condition and biomarker in HemOncKB",integer,publications,No
+date_added_y,Date the study was added to HemOncKB (suffix _y: study.table),date,YYYY-MM-DD,No
+start_converted,Start of enrollment parsed to a date by script 1 (a year alone becomes 1 January),date,YYYY-MM-DD,No
+end_converted,End of enrollment parsed to a date by script 1 (a year alone becomes 1 January),date,YYYY-MM-DD,No
+FDA_Notice_1,Matched FDA approval notification 1 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_1,Matched FDA approval notification 1 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_1,Matched FDA approval notification 1 (found by script 2): indication named in the notification,text,,No
+FDA_Date_1,Matched FDA approval notification 1 (found by script 2): date of the notification,date,YYYY-MM-DD,No
+FDA_Notice_2,Matched FDA approval notification 2 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_2,Matched FDA approval notification 2 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_2,Matched FDA approval notification 2 (found by script 2): indication named in the notification,text,,No
+FDA_Date_2,Matched FDA approval notification 2 (found by script 2): date of the notification,date,YYYY-MM-DD,No
+FDA_Notice_3,Matched FDA approval notification 3 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_3,Matched FDA approval notification 3 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_3,Matched FDA approval notification 3 (found by script 2): indication named in the notification,text,,No
+FDA_Date_3,Matched FDA approval notification 3 (found by script 2): date of the notification,date,YYYY-MM-DD,No
+FDA_Notice_4,Matched FDA approval notification 4 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_4,Matched FDA approval notification 4 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_4,Matched FDA approval notification 4 (found by script 2): indication named in the notification,text,,No
+FDA_Date_4,Matched FDA approval notification 4 (found by script 2): date of the notification,date,YYYY-MM-DD,No
+FDA_Notice_5,Matched FDA approval notification 5 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_5,Matched FDA approval notification 5 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_5,Matched FDA approval notification 5 (found by script 2): indication named in the notification,text,,No
+FDA_Date_5,Matched FDA approval notification 5 (found by script 2): date of the notification,date,YYYY-MM-DD,No
+FDA_Notice_6,Matched FDA approval notification 6 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_6,Matched FDA approval notification 6 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_6,Matched FDA approval notification 6 (found by script 2): indication named in the notification,text,,No
+FDA_Date_6,Matched FDA approval notification 6 (found by script 2): date of the notification,date,YYYY-MM-DD,No
+FDA_Notice_7,Matched FDA approval notification 7 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_7,Matched FDA approval notification 7 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_7,Matched FDA approval notification 7 (found by script 2): indication named in the notification,text,,No
+FDA_Date_7,Matched FDA approval notification 7 (found by script 2): date of the notification,date,YYYY-MM-DD,No
+FDA_Notice_8,Matched FDA approval notification 8 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_8,Matched FDA approval notification 8 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_8,Matched FDA approval notification 8 (found by script 2): indication named in the notification,text,,No
+FDA_Date_8,Matched FDA approval notification 8 (found by script 2): date of the notification,date,YYYY-MM-DD,No
+FDA_Notice_9,Matched FDA approval notification 9 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_9,Matched FDA approval notification 9 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_9,Matched FDA approval notification 9 (found by script 2): indication named in the notification,text,,No
+FDA_Date_9,Matched FDA approval notification 9 (found by script 2): date of the notification,date,YYYY-MM-DD,No
+FDA_Notice_10,Matched FDA approval notification 10 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_10,Matched FDA approval notification 10 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_10,Matched FDA approval notification 10 (found by script 2): indication named in the notification,text,,No
+FDA_Date_10,Matched FDA approval notification 10 (found by script 2): date of the notification,date,YYYY-MM-DD,No
+FDA_Notice_11,Matched FDA approval notification 11 (found by script 2): title of the FDA approval notification,text,,No
+FDA_Drug_11,Matched FDA approval notification 11 (found by script 2): drug named in the notification,text,,No
+FDA_Indication_11,Matched FDA approval notification 11 (found by script 2): indication named in the notification,text,,No
+Median_OS_intervention,"Median overall survival in the experimental arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_OS_ctrl,"Median overall survival in the control arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_PFS_intervention,"Median progression-free survival in the experimental arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_PFS_ctrl,"Median progression-free survival in the control arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+OS_HR,"Hazard ratio for overall survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+OS_HR_CI_low,"Lower 95% confidence limit of the hazard ratio for overall survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+OS_HR_CI_high,"Upper 95% confidence limit of the hazard ratio for overall survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+PFS_HR,"Hazard ratio for progression-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+PFS_HR_CI_low,"Lower 95% confidence limit of the hazard ratio for progression-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+PFS_HR_CI_high,"Upper 95% confidence limit of the hazard ratio for progression-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+Median_DFS_intervention,"Median disease-free survival in the experimental arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_EFS_intervention,"Median event-free survival in the experimental arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_IDFS_intervention,"Median invasive disease-free survival in the experimental arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_MFS_intervention,"Median metastasis-free survival in the experimental arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_PCR_RATE_intervention,"Median pathologic complete response rate in the experimental arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_RFS_intervention,"Median relapse-free survival in the experimental arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_TTP_intervention,"Median time to progression in the experimental arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_DFS_ctrl,"Median disease-free survival in the control arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_EFS_ctrl,"Median event-free survival in the control arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_IDFS_ctrl,"Median invasive disease-free survival in the control arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_MFS_ctrl,"Median metastasis-free survival in the control arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_PCR_RATE_ctrl,"Median pathologic complete response rate in the control arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_RFS_ctrl,"Median relapse-free survival in the control arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+Median_TTP_ctrl,"Median time to progression in the control arm, from the HemOncKB efficacy string",number,"months, or fraction 0-1 for rate endpoints",No
+DFS_HR,"Hazard ratio for disease-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+EFS_HR,"Hazard ratio for event-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+IDFS_HR,"Hazard ratio for invasive disease-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+MFS_HR,"Hazard ratio for metastasis-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+RFS_HR,"Hazard ratio for relapse-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+RPFS_HR,"Hazard ratio for radiographic PFS, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+TTP_HR,"Hazard ratio for time to progression, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+DFS_HR_CI_low,"Lower 95% confidence limit of the hazard ratio for disease-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+EFS_HR_CI_low,"Lower 95% confidence limit of the hazard ratio for event-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+IDFS_HR_CI_low,"Lower 95% confidence limit of the hazard ratio for invasive disease-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+MFS_HR_CI_low,"Lower 95% confidence limit of the hazard ratio for metastasis-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+RFS_HR_CI_low,"Lower 95% confidence limit of the hazard ratio for relapse-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+RPFS_HR_CI_low,"Lower 95% confidence limit of the hazard ratio for radiographic PFS, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+DFS_HR_CI_high,"Upper 95% confidence limit of the hazard ratio for disease-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+EFS_HR_CI_high,"Upper 95% confidence limit of the hazard ratio for event-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+IDFS_HR_CI_high,"Upper 95% confidence limit of the hazard ratio for invasive disease-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+MFS_HR_CI_high,"Upper 95% confidence limit of the hazard ratio for metastasis-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+RFS_HR_CI_high,"Upper 95% confidence limit of the hazard ratio for relapse-free survival, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No
+RPFS_HR_CI_high,"Upper 95% confidence limit of the hazard ratio for radiographic PFS, experimental vs control, from the HemOncKB efficacy string",number,hazard ratio,No

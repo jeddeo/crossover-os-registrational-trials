@@ -1,0 +1,13 @@
+# Frozen references used to check the release (never published)
+_reference/
+
+# The completed working master is private: it carries reviewer names, comments and check tabs
+data/manual/working_master.xlsx
+
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+~$*
+*.bak
+*_backup*

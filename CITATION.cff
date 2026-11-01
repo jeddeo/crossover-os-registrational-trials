@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this dataset or code, please cite it as below."
+title: "Control-arm crossover, Western enrollment, and overall survival benefit in front-line registrational oncology trials: data and code"
+version: 1.0.0
+license:
+  - MIT
+  - CC-BY-4.0
+authors:
+  - family-names: Paul
+    given-names: Jeddeo
+  - family-names: Shah
+    given-names: Syed Muhammad Ismail
+  - family-names: Davis
+    given-names: Timothy Joseph
+  - family-names: Warner
+    given-names: Jeremy
+  - family-names: Khaki
+    given-names: Ali Raza
+  - family-names: Dickerson
+    given-names: James C
